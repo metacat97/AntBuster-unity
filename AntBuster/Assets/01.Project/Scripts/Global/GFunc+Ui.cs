@@ -27,4 +27,7 @@ public static partial class GFunc
         // 가져올 텍스트메쉬 컴포넌트가 존재하는 경우
         tmpTxt.text = text_;
     }       // SetTextMeshPro()
+
+
+
 }

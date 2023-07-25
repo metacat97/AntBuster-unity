@@ -12,6 +12,7 @@ public class bulletSpawner : MonoBehaviour
     private Transform target;
     private float spawnRate;
     private float timeAfterSpawn;
+    private float nearEnemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,16 +24,18 @@ public class bulletSpawner : MonoBehaviour
     void Update()
     {
         timeAfterSpawn += Time.deltaTime;
-        //target = FindObjectOfType<Enemy>().transform;
+        target = FindObjectOfType<Enemy>().transform;
+        
 
     }
 
 
     private void OnTriggerStay(Collider other)
     {
-            target = FindObjectOfType<Enemy>().transform;
+            //target = FindObjectOfType<Enemy>().transform;
 
-        
+      
+        target = FindObjectOfType<Enemy>().transform;
         if (other.tag == "Enemy")
         {
             this.transform.LookAt(target);
