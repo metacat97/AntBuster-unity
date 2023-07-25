@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 6974441496057388478}
   - component: {fileID: 2304616883410119086}
   - component: {fileID: 789359092161165114}
+  - component: {fileID: 8292644506525776908}
+  - component: {fileID: -6722520998043561646}
+  - component: {fileID: -2734315666993096566}
   m_Layer: 0
   m_Name: Turret Tower 02
   m_TagString: Untagged
@@ -130,6 +133,46 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.428992, y: 4.488503, z: 3.9235973}
   m_Center: {x: 0, y: 2.244251, z: 0.03234589}
+--- !u!114 &8292644506525776908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010843408821421728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fc3ad740562a34986284b08c801487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6636283551906930375, guid: a2b89268ada82234d80de2d7fb60064e, type: 3}
+  spawnRateMin: 0.5
+  spawnRateMax: 3
+--- !u!114 &-6722520998043561646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010843408821421728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b017b8635471748b149fe7e5d67198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &-2734315666993096566
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010843408821421728}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9011297184049379114
 GameObject:
   m_ObjectHideFlags: 0

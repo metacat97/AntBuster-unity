@@ -6,7 +6,7 @@ using static UnityEngine.GraphicsBuffer;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab; //利 橇府普 
-    [SerializeField] private float enemyCount = 0f; //泅犁 积己等 利狼 荐 
+    public float enemyCount = 0f; //泅犁 积己等 利狼 荐 
     [SerializeField] private float enemyTreshold = 6.0f; // 利 弥措 积己 荐 
     
     // 利 积己 弥家 弥措 矫埃
@@ -28,7 +28,10 @@ public class EnemySpawner : MonoBehaviour
         //InvokeRepeating("SpawnEnemy", 2.0f, 5.0f*Time.deltaTime);
         timeAfterSpawn = 0f;
         spawnRate = Random.Range(spawnRateMin, spawnRateMax);
-        
+        //spawnRate = 3.0f;
+        Debug.Log(timeAfterSpawn);
+        //Debug.Log(spawnRate);
+
     }
 
     void Update()
@@ -40,7 +43,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 timeAfterSpawn = 0f;
 
-            enemyCount += 1.0f;
+                enemyCount += 1.0f;
                 Instantiate(enemyPrefab,
                     transform.position, transform.rotation, enemyPool);
 
@@ -67,6 +70,11 @@ public class EnemySpawner : MonoBehaviour
 
         //    spawnRate = Random.Range(spawnRateMin, spawnRateMax);
         //}
+    }
+
+    public void DecreaseEnemy()
+    {
+        enemyCount -= 1.0f;
     }
 
     //private void FixedUpdate()
